@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Placeholder image for YEM PAY">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6f2e4"/>
+      <stop offset="55%" stop-color="#efe9d6"/>
+      <stop offset="100%" stop-color="#e4dcc3"/>
+    </linearGradient>
+    <pattern id="guilloche" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <path d="M0 13h26M13 0v26" stroke="#1d6b4f" stroke-width="0.6" opacity="0.22"/>
+    </pattern>
+    <radialGradient id="rosette" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1d6b4f" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#1d6b4f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#paper)"/>
+  <rect width="1200" height="750" fill="url(#guilloche)"/>
+
+  <circle cx="190" cy="375" r="180" fill="url(#rosette)"/>
+  <circle cx="1010" cy="375" r="180" fill="url(#rosette)"/>
+  <g fill="none" stroke="#14543f" stroke-width="1.1" opacity="0.4">
+    <circle cx="190" cy="375" r="120"/><circle cx="190" cy="375" r="95"/><circle cx="190" cy="375" r="70"/><circle cx="190" cy="375" r="45"/>
+    <circle cx="1010" cy="375" r="120"/><circle cx="1010" cy="375" r="95"/><circle cx="1010" cy="375" r="70"/><circle cx="1010" cy="375" r="45"/>
+  </g>
+
+  <rect x="26" y="26" width="1148" height="698" fill="none" stroke="#14543f" stroke-width="5"/>
+  <rect x="44" y="44" width="1112" height="662" fill="none" stroke="#14543f" stroke-width="1.6" stroke-dasharray="10 7"/>
+
+  <g transform="translate(600 300)" fill="none" stroke="#14543f" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" opacity="0.75">
+    <path d="M-95 -38h42l17-24h72l17 24h42a16 16 0 0 1 16 16v98a16 16 0 0 1-16 16h-190a16 16 0 0 1-16-16v-98a16 16 0 0 1 16-16z"/>
+    <circle cx="0" cy="27" r="40"/>
+  </g>
+
+  <text x="600" y="470" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="46" letter-spacing="10" fill="#14543f">PLACEHOLDER</text>
+  <text x="600" y="524" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="31" letter-spacing="4" fill="#1d6b4f" opacity="0.9">YEM PAY</text>
+  <text x="600" y="576" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="21" letter-spacing="3" fill="#8a7f5e">REPLACE WITH YOUR IMAGE &#183; 1200 &#215; 750</text>
+
+  <g font-family="Georgia,'Times New Roman',serif" fill="#14543f" opacity="0.85">
+    <text x="78" y="118" font-size="52" letter-spacing="2">04</text>
+    <text x="1122" y="666" font-size="52" letter-spacing="2" text-anchor="end">04</text>
+  </g>
+</svg>
