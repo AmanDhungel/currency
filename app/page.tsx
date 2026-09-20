@@ -1,4 +1,5 @@
 import NoteCard from "@/components/NoteCard";
+import PromoBanner from "@/components/PromoBanner";
 import Rosette from "@/components/Rosette";
 import { ECOSYSTEM_LINKS } from "@/lib/links";
 
@@ -90,6 +91,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <PromoBanner />
 
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="shell">

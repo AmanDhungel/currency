@@ -24,7 +24,7 @@ export const ECOSYSTEM_LINKS: EcosystemLink[] = [
       "The core blockchain network powering the entire YEM ecosystem — secure, fast and built for real-world value transfer.",
     href: "https://yemchain.com",
     domain: "yemchain.com",
-    image: "/images/yemchain.svg",
+    image: "/images/img-1.png",
     serial: "A 00000001 A",
     denomination: "01",
   },
@@ -36,7 +36,7 @@ export const ECOSYSTEM_LINKS: EcosystemLink[] = [
       "Track every block, transaction, wallet and token in real time with the official YEM chain explorer.",
     href: "https://yemscan.com",
     domain: "yemscan.com",
-    image: "/images/yemscan.svg",
+    image: "/images/img-2.png",
     serial: "B 00000002 B",
     denomination: "02",
   },
@@ -48,7 +48,7 @@ export const ECOSYSTEM_LINKS: EcosystemLink[] = [
       "The foundation behind the project — governance, milestones and the published roadmap for what comes next.",
     href: "https://yem.foundation",
     domain: "yem.foundation",
-    image: "/images/yem-foundation.svg",
+    image: "/images/img-3.png",
     serial: "C 00000003 C",
     denomination: "03",
   },
@@ -60,7 +60,7 @@ export const ECOSYSTEM_LINKS: EcosystemLink[] = [
       "Send, receive and settle payments in seconds. Merchant-ready checkout for everyday spending.",
     href: "https://yempay.com",
     domain: "yempay.com",
-    image: "/images/yempay.svg",
+    image: "/images/img-4.png",
     serial: "D 00000004 D",
     denomination: "04",
   },
@@ -72,7 +72,7 @@ export const ECOSYSTEM_LINKS: EcosystemLink[] = [
       "Over-the-counter desk for large-volume trades, handled directly with settlement you can verify on chain.",
     href: "https://digitalchain.center",
     domain: "digitalchain.center",
-    image: "/images/digitalchain.svg",
+    image: "/images/img-5.png",
     serial: "E 00000005 E",
     denomination: "05",
   },
@@ -81,4 +81,18 @@ export const ECOSYSTEM_LINKS: EcosystemLink[] = [
 export const POWERED_BY = {
   label: "Deswits",
   href: "https://deswits.com",
+};
+
+/**
+ * Promotional offer shown in the highlighted band on the landing page.
+ * `code` is published verbatim — change it here and nowhere else.
+ */
+export const PROMO = {
+  eyebrow: "Special Offer",
+  headline: "Join Deswits with pro code",
+  code: "Deswts25",
+  description:
+    "Use the code below when you sign up at Deswits to unlock pro access.",
+  cta: "Join Deswits",
+  href: POWERED_BY.href,
 };

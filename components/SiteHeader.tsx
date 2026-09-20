@@ -16,6 +16,7 @@ export default function SiteHeader() {
 
         <nav className="header-nav" aria-label="Primary">
           <a href="#ecosystem">Ecosystem</a>
+          <a href="#offer">Offer</a>
           <a href="https://yemscan.com" target="_blank" rel="noopener noreferrer">
             Explorer
           </a>
