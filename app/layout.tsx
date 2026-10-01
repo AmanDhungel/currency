@@ -1,32 +1,91 @@
 import type { Metadata, Viewport } from "next";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+  KEYWORDS,
+  OG_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+  YOUTUBE,
+} from "@/lib/seo";
 import "./globals.css";
 
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+
 export const metadata: Metadata = {
-  title: "YEM Ecosystem — Blockchain, Explorer, Payments & OTC",
-  description:
-    "One place for the YEM ecosystem: the YEM Chain network, the YEM Scan explorer, the YEM Foundation roadmap, YEM Pay and the Digital Chain Center OTC desk.",
-  keywords: [
-    "YEM",
-    "YEM Chain",
-    "YEM Scan",
-    "YEM Foundation",
-    "YEM Pay",
-    "Digital Chain Center",
-    "blockchain",
-    "blockchain explorer",
-    "OTC",
-  ],
-  openGraph: {
-    title: "YEM Ecosystem",
-    description:
-      "The YEM Chain network, explorer, roadmap, payments and OTC desk — all in one place.",
-    type: "website",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: "%s | YEM Chain",
   },
+  description: DEFAULT_DESCRIPTION,
+  keywords: [...KEYWORDS],
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    locale: "en_US",
+    images: [
+      {
+        url: OG_IMAGE.url,
+        width: OG_IMAGE.width,
+        height: OG_IMAGE.height,
+        alt: OG_IMAGE.alt,
+        type: OG_IMAGE.type,
+      },
+    ],
+    videos: [
+      {
+        url: YOUTUBE.url,
+        width: 1280,
+        height: 720,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [OG_IMAGE.url],
+    // `site` / `creator` intentionally omitted: no official X handle exists
+    // anywhere in the codebase, and a wrong handle credits someone else.
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
+  },
+  manifest: "/manifest.webmanifest",
+  // app/icon.svg is picked up by Next's file convention and emitted
+  // automatically; declared here so the rel="icon" type is explicit.
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
+  ...(googleVerification
+    ? { verification: { google: googleVerification } }
+    : {}),
 };
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#f5f1e3" },
     { media: "(prefers-color-scheme: dark)", color: "#071a13" },
@@ -47,11 +106,11 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <a className="sr-only" href="#ecosystem">
-          Skip to the ecosystem links
+        <a className="skip-link" href="#main">
+          Skip to main content
         </a>
         <SiteHeader />
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <SiteFooter />
       </body>
     </html>

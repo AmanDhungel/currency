@@ -91,6 +91,27 @@ a {
   border: 0;
 }
 
+/* Off-screen until focused, then pinned to the top-left. */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  padding: 11px 18px;
+  border: 1px solid var(--green);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--green-deep);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.16s ease;
+}
+
+.skip-link:focus-visible {
+  top: 12px;
+}
+
 /* ---------------------------------------------------------
    Engraved ornaments
    --------------------------------------------------------- */
