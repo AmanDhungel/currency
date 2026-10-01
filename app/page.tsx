@@ -1,3 +1,4 @@
+import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import NoteCard from "@/components/NoteCard";
 import PromoBanner from "@/components/PromoBanner";
@@ -19,7 +20,7 @@ export default function Home() {
     <>
       <JsonLd />
 
-      <section className="hero">
+      <section className="hero" aria-labelledby="hero-heading">
         <Rosette className="hero-rosette" />
 
         <div className="shell">
@@ -28,15 +29,17 @@ export default function Home() {
             <span>One ecosystem · Five destinations</span>
           </span>
 
-          <h1>
-            The YEM Ecosystem
-            <em>In One Place</em>
+          <h1 id="hero-heading">
+            YEM Chain
+            <em>The Yemchain Digital Currency Ecosystem</em>
           </h1>
 
           <p>
-            The chain that settles it, the explorer that proves it, the foundation
-            that plans it, the rail that pays with it and the desk that trades it.
-            Pick a note below and go straight there.
+            YEM Chain is a blockchain digital currency ecosystem built around YEM
+            coin. Move value across the network, confirm every transfer through
+            on-chain verification on YEM Scan, spend at checkout with YEM Pay,
+            and trade larger amounts through the OTC desk. Five destinations,
+            one secure starting point.
           </p>
 
           <div className="hero-actions">
@@ -77,13 +80,17 @@ export default function Home() {
 
       <VideoSection />
 
-      <section className="section" id="ecosystem">
+      <section
+        className="section"
+        id="ecosystem"
+        aria-labelledby="ecosystem-heading"
+      >
         <div className="shell">
           <div className="section-head">
             <div className="rule">
               <span className="eyebrow">The Ecosystem</span>
             </div>
-            <h2>Every destination, one landing</h2>
+            <h2 id="ecosystem-heading">Every destination, one landing</h2>
             <p>
               Each card opens an official YEM destination in a new tab. Nothing
               else, nothing in between.
@@ -98,9 +105,11 @@ export default function Home() {
         </div>
       </section>
 
+      <Faq />
+
       <PromoBanner />
 
-      <section className="section" style={{ paddingTop: 0 }}>
+      <section className="section" style={{ paddingTop: 0 }} aria-label="YEM ecosystem at a glance">
         <div className="shell">
           <dl className="facts">
             {FACTS.map((fact) => (

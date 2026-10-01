@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { EcosystemLink } from "@/lib/links";
 
 export default function NoteCard({ link }: { link: EcosystemLink }) {
@@ -14,15 +15,14 @@ export default function NoteCard({ link }: { link: EcosystemLink }) {
       </span>
 
       <div className="note-media">
-        {/* Placeholder artwork — swap the file in /public/images/ and update
-            `image` in lib/links.ts when your photos are ready. */}
-        <img
+        {/* Below the fold on every viewport, so lazy loading (the default)
+            is correct here — no `priority`. */}
+        <Image
           src={link.image}
-          alt=""
-          width={1200}
-          height={750}
-          loading="lazy"
-          decoding="async"
+          alt={`${link.title} — ${link.tagline} in the Yemchain ecosystem`}
+          fill
+          sizes="(max-width: 400px) 100vw, (max-width: 900px) 50vw, 380px"
+          className="note-img"
         />
         <span className="note-denom" aria-hidden="true">
           {link.denomination}

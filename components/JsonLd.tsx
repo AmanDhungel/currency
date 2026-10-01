@@ -1,3 +1,4 @@
+import { FAQ_ITEMS } from "@/lib/faq";
 import { ECOSYSTEM_LINKS } from "@/lib/links";
 import {
   DEFAULT_DESCRIPTION,
@@ -89,6 +90,20 @@ const graph = [
       name: link.title,
       description: link.tagline,
       url: link.href,
+    })),
+  },
+  {
+    // Rendered from the same FAQ_ITEMS array as the visible accordion, so
+    // the schema always matches the text on the page.
+    "@type": "FAQPage",
+    "@id": `${SITE_URL}/#faq`,
+    mainEntity: FAQ_ITEMS.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
     })),
   },
 ];
