@@ -33,7 +33,11 @@ export default function PromoBanner() {
   }
 
   return (
-    <section className="section promo-section" id="offer">
+    <section
+      className="section promo-section"
+      id="offer"
+      aria-labelledby="offer-heading"
+    >
       <div className="shell">
         <div className="promo">
           <span className="promo-corner promo-corner-tl" aria-hidden="true" />
@@ -44,7 +48,7 @@ export default function PromoBanner() {
               <div className="rule promo-rule">
                 <span className="eyebrow">{PROMO.eyebrow}</span>
               </div>
-              <h2>{PROMO.headline}</h2>
+              <h2 id="offer-heading">{PROMO.headline}</h2>
               <p>{PROMO.description}</p>
             </div>
 

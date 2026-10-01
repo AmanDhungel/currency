@@ -18,8 +18,8 @@ export default function SiteFooter() {
               </span>
             </span>
             <p>
-              The network, the explorer, the roadmap, the payment rail and the OTC
-              desk — every part of YEM, reachable from one page.
+              YEM Chain digital currency, in one place: the network, the explorer, the
+              roadmap, the payment gateway and the OTC desk.
             </p>
           </div>
 

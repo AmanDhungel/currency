@@ -21,7 +21,7 @@ export const ECOSYSTEM_LINKS: EcosystemLink[] = [
     title: "YEM Chain",
     tagline: "Blockchain",
     description:
-      "The core blockchain network powering the entire YEM ecosystem — secure, fast and built for real-world value transfer.",
+      "The YEM blockchain network at the core of the ecosystem, where YEM coin is issued, transferred and secured.",
     href: "https://yemchain.com",
     domain: "yemchain.com",
     image: "/images/img-1.png",
@@ -33,7 +33,7 @@ export const ECOSYSTEM_LINKS: EcosystemLink[] = [
     title: "YEM Scan",
     tagline: "Blockchain Explorer",
     description:
-      "Track every block, transaction, wallet and token in real time with the official YEM chain explorer.",
+      "The YEM Scan blockchain explorer: search any block, wallet or token and confirm a YEM transaction in real time.",
     href: "https://yemscan.com",
     domain: "yemscan.com",
     image: "/images/img-2.png",
@@ -45,7 +45,7 @@ export const ECOSYSTEM_LINKS: EcosystemLink[] = [
     title: "YEM Foundation",
     tagline: "Roadmap & Vision",
     description:
-      "The foundation behind the project — governance, milestones and the published roadmap for what comes next.",
+      "Governance, milestones and the published YEM Foundation roadmap for what the ecosystem builds next.",
     href: "https://yem.foundation",
     domain: "yem.foundation",
     image: "/images/img-3.png",
@@ -57,7 +57,7 @@ export const ECOSYSTEM_LINKS: EcosystemLink[] = [
     title: "YEM Pay",
     tagline: "Payments",
     description:
-      "Send, receive and settle payments in seconds. Merchant-ready checkout for everyday spending.",
+      "A cryptocurrency payment gateway for everyday spending: send, receive and settle YEM Pay crypto payments in seconds.",
     href: "https://yempay.com",
     domain: "yempay.com",
     image: "/images/img-4.png",
@@ -69,7 +69,7 @@ export const ECOSYSTEM_LINKS: EcosystemLink[] = [
     title: "Digital Chain Center",
     tagline: "OTC Transactions",
     description:
-      "Over-the-counter desk for large-volume trades, handled directly with settlement you can verify on chain.",
+      "A crypto OTC trading desk for large-volume trades, with settlement you can verify on chain.",
     href: "https://digitalchain.center",
     domain: "digitalchain.center",
     image: "/images/img-5.png",
