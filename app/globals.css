@@ -12,7 +12,7 @@
   --green: #14543f;
   --green-deep: #0a2f23;
   --green-light: #1d6b4f;
-  --green-mist: #4e8a72;
+  --green-mist: #3d745f;
   --gold: #b8912f;
 
   --surface: #faf7ec;
@@ -1176,7 +1176,7 @@ a {
 
   .btn-primary {
     color: #06170f;
-    background: linear-gradient(175deg, #74d0a8, #2f8a68);
+    background: linear-gradient(175deg, #74d0a8, #359172);
   }
 
   .promo {
