@@ -1,6 +1,7 @@
 import NoteCard from "@/components/NoteCard";
 import PromoBanner from "@/components/PromoBanner";
 import Rosette from "@/components/Rosette";
+import VideoSection from "@/components/VideoSection";
 import { ECOSYSTEM_LINKS } from "@/lib/links";
 
 const MICROTEXT = "YEM ECOSYSTEM · SECURE · VERIFIABLE · ON CHAIN · ";
@@ -70,6 +71,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <VideoSection />
 
       <section className="section" id="ecosystem">
         <div className="shell">

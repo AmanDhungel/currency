@@ -69,8 +69,13 @@ export const YOUTUBE = {
  * reliable across WhatsApp, LinkedIn and Facebook scrapers, and the preview
  * survives if the video is ever removed.
  */
+/** Site-relative path, for <Image> and anything else served from this origin. */
+export const OG_IMAGE_PATH = "/og/yem-og.jpg";
+
 export const OG_IMAGE = {
-  url: `${SITE_URL}/og/yem-og.jpg`,
+  /** Absolute — social scrapers reject relative og:image values. */
+  url: `${SITE_URL}${OG_IMAGE_PATH}`,
+  path: OG_IMAGE_PATH,
   width: 1280,
   height: 720,
   alt: "YEM Chain — Yemchain digital currency and blockchain ecosystem",
