@@ -12,6 +12,25 @@ const nextConfig = {
    * forwarded protocol, not the real one, so the host must enforce it.
    * On Vercel that is automatic once the domain is attached.
    */
+  /**
+   * /og/* is immutable in practice — the share image only changes when the
+   * filename does — so let CDNs and scrapers cache it hard. Everything
+   * under /_next/static already ships with immutable headers from Next.
+   */
+  async headers() {
+    return [
+      {
+        source: "/og/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
+    ];
+  },
+
   async redirects() {
     return [
       {
