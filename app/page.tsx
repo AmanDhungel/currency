@@ -1,3 +1,4 @@
+import JsonLd from "@/components/JsonLd";
 import NoteCard from "@/components/NoteCard";
 import PromoBanner from "@/components/PromoBanner";
 import Rosette from "@/components/Rosette";
@@ -16,6 +17,8 @@ const FACTS = [
 export default function Home() {
   return (
     <>
+      <JsonLd />
+
       <section className="hero">
         <Rosette className="hero-rosette" />
 
