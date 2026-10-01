@@ -8,7 +8,7 @@ export default function NoteCard({ link }: { link: EcosystemLink }) {
       href={link.href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`${link.title} — ${link.tagline}. Opens ${link.domain} in a new tab.`}
+      aria-label={`Visit ${link.title} — ${link.tagline}. Opens ${link.domain} in a new tab.`}
     >
       <span className="note-serial" aria-hidden="true">
         {link.serial}
@@ -21,7 +21,7 @@ export default function NoteCard({ link }: { link: EcosystemLink }) {
           src={link.image}
           alt={`${link.title} — ${link.tagline} in the Yemchain ecosystem`}
           fill
-          sizes="(max-width: 400px) 100vw, (max-width: 900px) 50vw, 380px"
+          sizes="(max-width: 400px) 100vw, (max-width: 900px) 50vw, 440px"
           className="note-img"
         />
         <span className="note-denom" aria-hidden="true">
